@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+
+button{
+	cursor:pointer;
+	&:hover{
+		cursor:pointer;
+	}
+}
+a{
+	text-decoration:none;
+	cursor:pointer;
+	&:hover{
+		text-decoration:none;
+		cursor:pointer;
+	}
+}
