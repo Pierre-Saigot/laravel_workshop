@@ -25,9 +25,9 @@
 					</textarea>
 				</div>
 				<div class="form-group row mb-0">
-					<button type="submit" class="btn btn-normal btn-blue btn-submit">
-						<span><i class="fas fa-check"></i></span>
-						{{ __('Envoyer') }}
+					<button type="submit" class="btn btn-normal btn-submit btn-grey">
+						<span><i class="fas fa-envelope"></i></span>
+						Envoyer
 					</button>
 				</div>
 			</form>

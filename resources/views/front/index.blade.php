@@ -28,7 +28,7 @@
 			<form action="" method="POST" role="search"></form>
 			{{ csrf_field() }}
 			<div class="input-search input-group">
-				<input name="search" class="form-control" type="search" id="site-search" placeholder="Saisissez le titre d'un stage ou formation">
+				<input name="search" class="form-control" type="search" id="site-search" placeholder="Recherche...">
 				<div class="input-group-append">
         				<button type="submit"><i class='fas fa-search'></i></button>
   				</div>

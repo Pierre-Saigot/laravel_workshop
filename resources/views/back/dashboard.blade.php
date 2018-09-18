@@ -1,18 +1,17 @@
 @extends('layouts.master')
 @section('content')
 <div class="dashboard gradient">
-	<div class="notification">
-	</div>
+	<div class="notif"></div>
 	<div class="dashboard-content">
-		<div class="tableau">
+		<div class="table">
 			<div class="top-table gradient">
 				<div class="top-table-title">
 					<h1>Administration</h1>
 				</div>
 				<div class="top-table-action">
-					<a href="{{url('post/create')}}" class="btn btn-blue btn-normal btn-add">
-						<span><i class="fas fa-plus"></i></span>
-						Ajouter un(e) stage / formation
+					<a href="{{url('post/create')}}" class="btn btn-grey btn-normal btn-add">
+						<span><i class="fas fa-edit"></i></span>
+						Ajouter un stage / formation
 					</a>
 					<!-- <button class="btn btn-red btn-normal btn-remove-multiple">
 						<span><i class="fas fa-trash-alt"></i></span>
@@ -38,11 +37,11 @@
 							<td>{{ $post->created_at }}</td>
 							<td></td>
 							<td>
+								<a href="{{ url('post/' . $post->id) }}" class="btn btn-icon btn-view btn-grey" id="view_post-{{$post->id}}" data-toggle="tooltip" title="Voir" target="blank">
+									<span><i class="fa fa-eye"></i></span>
+								</a>
 								<a href="post/edit/{{ $post->id }}" class="btn btn-grey btn-icon btn-edit" id="edit_post-{{$post->id}}" data-toggle="tooltip" title="Modifier">
 									<span><i class="far fa-edit"></i></span>
-								</a>
-								<a href="{{ url('post/' . $post->id) }}" class="btn btn-blue btn-icon btn-preview" id="view_post-{{$post->id}}" data-toggle="tooltip" title="Prévisualiser" target="blank">
-									<span><i class="far fa-eye"></i></span>
 								</a>
 								<a href="{{route('post.destroy',$post->id)}}" class="btn btn-red btn-icon" id="remove_post-{{$post->id}}" data-toggle="tooltip" title="Supprimer">
 									<span><i class="far fa-trash-alt"></i></span>
@@ -56,7 +55,7 @@
 		</div>
 		<div class="popup_remove">
 			{{ csrf_token() }}
-			<a href="javascript:;" class="btn-close-remove">
+			<a href="javascript:;" class="btn-close_remove">
 				<i class="far fa-times-circle"></i>
 			</a>
 			<div class="popup_content">
@@ -71,11 +70,11 @@
 					<div class="btn_action">
 						<a href="{{route('post.destroy', ['id' => $post->id])}}" type="submit" class="btn btn-red btn-normal btn-remove">
 							<span><i class="fas fa-trash-alt"></i></span>
-							{{ __('Supprimer') }}
+							Supprimer
 						</a>
 						<button type="submit" class="btn btn-yellow btn-normal btn-cancel">
 							<span><i class="fas fa-ban"></i></span>
-							{{ __('Annuler') }}
+							Annuler
 						</button>
 					</div>
 				</div>

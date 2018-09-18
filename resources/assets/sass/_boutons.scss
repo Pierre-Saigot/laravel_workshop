@@ -36,36 +36,18 @@
 		}
 	}
 	.btn-grey{
-		color: #909399;
-		background: #f4f4f5;
-		border-color: #d3d4d6;
+		color: $white;
+		background: $black;
+		border-color: $black;
+		text-transform: uppercase;
 		&:hover,
 		&:focus{
-    			background-color: #909399;
-    			border-color: #909399;
-			color: #fff;
+			color: $white;
+    		opacity: 0.7;
 		}
 	}
-	.btn-yellow{
-		color: #e6a23c;
-		background: #fdf6ec;
-		border-color: #f5dab1;
-		&:hover,
-		&:focus{
-			background: #e6a23c;
-			border-color: #e6a23c;
-			color: #fff;
-		}
-	}
-	.btn-blue{
-		background: #ecf5ff;
-		border-color:#b3d8ff;
-		&:hover,
-		&:focus{
-			color:#FFF;
-			background:#39F;
-			border-color:#39F;
-		}
+	.btn-view{
+		opacity: 0.9;
 	}
 	.btn-red{
 		color: #f56c6c;

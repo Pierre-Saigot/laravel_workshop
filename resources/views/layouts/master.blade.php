@@ -5,6 +5,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
+		<!-- CSRF Token -->
+		<meta name="csrf-token" content="{{ csrf_token() }}">
 		<title>Formation - Laravel PROJET</title>
 
 		<!-- Appel des Styles -->
@@ -21,7 +23,7 @@
     					<ul>
     						<li>
     							<a class="logo" href="{{ url('/') }}">
-									<img src="assets/logo.png"/>
+									<img src="{{ asset('assets/logo.png') }}"/>
     							</a>
     						</li>
     						<li>
@@ -49,15 +51,15 @@
 								<div class="dropdown">
 									<a 	class="link-dashboard" 
 										href="{{ url('dashboard') }}">
-										<span><i class="fas fa-table"></i></span>
-										{{ __('Dashboard') }}
+										<span><i class="fas fa-clipboard-list"></i></span>
+										Administration
 									</a>	
 									<hr>
 									<a 	class="link-logout" 
 										href="{{ route('logout') }}"
 										onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-										<span><i class="fas fa-sign-out-alt"></i></span>
-										{{ __('Déconnexion') }}
+										<span><i class="fas fa-door-open"></i></span>
+										Déconnexion
 									</a>
 									<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
 										@csrf
