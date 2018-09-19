@@ -12,11 +12,11 @@
 				<div class="right-item">
 					<span class="type">{{ $posts->post_type }}</span >
 					<a class="title" href="{{ url('post/' . $posts->id) }}">{{ $posts->title }}</a>
-					<p class="description">{{ $posts->description }}</p>	
 					<p class="date-start">
 						<i class="far fa-calendar-alt"></i>
 						Débute le : {{$posts->start}}
 					</p> 	
+					<p class="description">{{ $posts->description }}</p>	
 				</div>
 			</div>
 		@endforeach

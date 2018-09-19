@@ -19,6 +19,7 @@ class CreatePostsTable extends Migration{
 			$table->text('description')->nullable();
 			$table->date('start');
 			$table->date('end');
+			$table->string('status');
 			$table->float('price', 7, 2);
 			$table->integer('max_users');
 			$table->foreign('category_id')->references('id')->on('categories')->onDelete('SET NULL');

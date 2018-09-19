@@ -1,9 +1,9 @@
 @extends('layouts.master')
 	@section('content')
-	<div class="create gradient">
+	<div class="create ">
 		<div class="create-content">
-			<div class="top-create gradient">
-				<h1>Ajout d'un(e) stage ou d'une formation</h1>	
+			<div class="top-create">
+				<h1>Création d'une formation ou stage</h1>	
 			</div>
 			<form action="{{ url('/dashboard') }}" method="post" enctype="multipart/form-data">
 				<div class="form-group form-row">
@@ -15,13 +15,11 @@
 					<textarea id="description" name="description" class="form-control" placeholder="Description de votre stage ou formation" required></textarea>
 				</div>
 				<div class="form-group">
-    					<label for="picture">Example file input</label>
-    					<input type="file" name="picture" class="form-control-file" id="picture">
-					<!-- <div class="picture">
-						<label for="picture">Image</label>
-						<input id="picture" type="file" name="picture" class="input-file">
+					<div class="picture">
+						<label for="picture">Upload image</label>
+						<input id="picture" type="file" name="picture" class="input-file" accept="image/*">
 						<div class="input-group">
-							<input type="text" class="form-control" disabled placeholder="Image de votre stage ou formation">
+							<input type="text" class="form-control" disabled  accept="image/*"placeholder="Image de votre stage ou formation" value="image.png">
 							<div class="input-group-prepend">
 								<button class="btn btn-blue btn-normal upload-field" type="button">
 									<span><i class="fas fa-upload"></i></span>
@@ -29,37 +27,43 @@
 								</button>
 							</div>
 						</div>
-					</div> -->
+					</div>
+					<div class="valid-feedback">
+						Image valide.
+					</div>
+					<div class="invalid-feedback">
+						Image invalide.
+					</div>
 				</div>
 				<div class="form-group row">
 					<div class="date_start">
-						<label for="start">Démarre le</label>
+						<label for="start">Date du début :</label>
 						<input id="start" name="start" class="form-control" type="date" placeholder="01/01/2018" required>
 					</div>
 					<div class="date_end">
-						<label for="end">Termine le</label>
+						<label for="end">Date de fin : </label>
 						<input id="end" name="end" class="form-control" type="date" placeholder="01/01/2018"  required>
 					</div>
 				</div>
 				<div class="form-group row">
+					<div class="maxuser">
+						<label for="max_users">Nombre d'étudiants</label>
+						<input id="max_users" type="number" class="form-control" name="max_users" placeholder="5" required>
+					</div>
 					<div class="price">
-						<label for="price">Prix</label>
+						<label for="price">Coût</label>
 						<div class="input-group">
-							<input id="price" type="number" class="form-control" name="price" placeholder="500" required>
+							<input id="price" type="number" class="form-control" name="price" placeholder="250" required>
 							<div class="input-group-append">
 								<span class="input-group-text">€</span>
 							</div>
 						</div>
 					</div>
-					<div class="maxuser">
-						<label for="max_users">Nombre d'utilisateurs</label>
-						<input id="max_users" type="number" class="form-control" name="max_users" placeholder="5" required>
-					</div>
 				</div>
 				<div class="form-group row mb-0">
-					<button type="submit" class="btn btn-blue btn-normal">
-						<span><i class="fas fa-plus"></i></span>
-						Ajouter
+					<button type="submit" class="btn btn-grey btn-add btn-normal">
+						<span><i class="fa fa-plus-square"></i></span>
+						Terminé
 					</button>
 				</div>
 				{{csrf_field()}}

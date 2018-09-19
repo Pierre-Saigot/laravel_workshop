@@ -1,8 +1,8 @@
 @extends('layouts.master')
 @section('content')
-<div class="login gradient">
+<div class="login ">
 	<div class="login-content">
-		<div class="top-login gradient">
+		<div class="top-login ">
 			<h1>Connexion</h1>
 		</div>
 		<div class="form-login">
@@ -14,7 +14,7 @@
 					@if ($errors->has('email'))
 						<span class="invalid-feedback" role="alert">
 							<strong>
-								Adresse mail introuvable
+								Adresse mail et / ou mot de passe introuvable
 							</strong>
 						</span>
 					@endif
@@ -22,13 +22,6 @@
 				<div class="form-group row">
 					<label for="password">Mot de passe</label>
 					<input id="password" type="password" placeholder="admin" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required autocomplete="off" >
-					@if ($errors->has('password'))
-						<span class="invalid-feedback" role="alert">
-							<strong>
-								Le password n'est pas le bon
-							</strong>
-						</span>
-					@endif
 				</div>
 				<div class="form-group row">
 					<div class="form-check">

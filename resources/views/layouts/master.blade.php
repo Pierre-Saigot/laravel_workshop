@@ -45,7 +45,7 @@
 						<ul>
 							<li class="user-connected">
 								<a class="user" href="javascript:;">
-									<span><i class="far fa-user"></i></span>
+									<span><i class="fa fa-user"></i></span>
 									{{ Auth::user()->name }}
 								</a>
 								<div class="dropdown">

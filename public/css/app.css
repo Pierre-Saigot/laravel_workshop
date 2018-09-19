@@ -10613,6 +10613,17 @@ a:hover {
   opacity: 0.9;
 }
 
+.btn-shadow {
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.btn-add {
+  padding: 20px 30px;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
 .btn-red {
   color: #f56c6c;
   background: #fef0f0;
@@ -11703,7 +11714,7 @@ nav .nav-content .user-connected .dropdown a.link-logout:hover {
 .content .edit .create-content .top-edit h1,
 .content .edit .edit-content .top-create h1,
 .content .edit .edit-content .top-edit h1 {
-  color: #FFF;
+  color: #2E2E2E;
   font-size: 24px;
   font-weight: 400;
   letter-spacing: 0.5px;
@@ -11950,21 +11961,9 @@ footer {
   background: #F8F8FA;
 }
 
-footer .footer-content ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 footer .footer-content ul li {
   margin: 10px;
+  display: inline-block;
 }
 
 footer .footer-content ul li a {

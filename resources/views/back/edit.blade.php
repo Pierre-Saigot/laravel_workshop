@@ -1,9 +1,9 @@
 @extends('layouts.master')
 	@section('content')
-	<div class="edit gradient">
+	<div class="edit ">
 		<div class="edit-content">
 			@if(count($posts)>0)
-			<div class="top-edit gradient">
+			<div class="top-edit ">
 				<h1>Modification d'un stage ou d'une formation
 				</h1>	
 			</div>
@@ -31,7 +31,7 @@
 				</div>
 				<div class="form-group">
 					<div class="picture">
-						<label for="picture">Image</label>
+						<label for="picture">Upload image</label>
 						<input id="picture" type="file" name="picture" class="input-file">
 						<div class="input-group">
 							<input type="text" class="form-control" disabled placeholder="Image de votre stage ou formation" value="{{($posts->pictures->link)}}">

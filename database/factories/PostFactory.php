@@ -9,6 +9,7 @@ $factory->define(App\Post::class, function (Faker $faker) {
                 'description' => $faker -> paragraph(),
                 'start' => $faker -> dateTime(),
                 'end' => $faker -> dateTime(),
+                'status' => 'true',
                 'price' => $faker -> randomFloat($nbMaxDecimals = 2, $min= 0, $max = 5000.00),
                 'max_users' => $faker -> numberBetween(0, 30)
 	];

@@ -1,10 +1,10 @@
 @extends('layouts.master')
 @section('content')
-<div class="dashboard gradient">
+<div class="dashboard ">
 	<div class="notif"></div>
 	<div class="dashboard-content">
 		<div class="table">
-			<div class="top-table gradient">
+			<div class="top-table ">
 				<div class="top-table-title">
 					<h1>Administration</h1>
 				</div>
@@ -13,37 +13,37 @@
 						<span><i class="fas fa-edit"></i></span>
 						Ajouter un stage / formation
 					</a>
-					<!-- <button class="btn btn-red btn-normal btn-remove-multiple">
-						<span><i class="fas fa-trash-alt"></i></span>
-						Supression multiple
-					</button> -->
 				</div>			
 			</div>
 			<table class="table table-bordered table-hover">
 				<thead>
-					<!-- <th><i class="fas fa-trash-alt"></i></th> -->
 					<th>Titre</th>
 					<th>Type</th>
 					<th>Crée le</th>
 					<th>Statut</th>
-					<th>Action(s)</th>
+					<th>Action</th>
 				</thead>
 				<tbody>
 					@foreach ($posts as $post)
 						<tr>
-							<!-- <td> <input type="checkbox"> </td> -->
-							<td>{{ $post->titre }}</td>
+							<td>{{ $post->title }}</td>
 							<td>{{ $post->post_type }}</td>
 							<td>{{ $post->created_at }}</td>
-							<td></td>
 							<td>
-								<a href="{{ url('post/' . $post->id) }}" class="btn btn-icon btn-view btn-grey" id="view_post-{{$post->id}}" data-toggle="tooltip" title="Voir" target="blank">
+								@if($post->status)
+								<span><i class="fa fa-check"></i></span>
+								@else
+									<span><i class="fa fa-times"></i></span>
+								@endif
+							</td>
+							<td>
+								<a href="{{ url('post/' . $post->id) }}" class="btn btn-icon btn-view btn-shadow btn-grey" id="view_post-{{$post->id}}" data-toggle="tooltip" title="Voir" target="blank">
 									<span><i class="fa fa-eye"></i></span>
 								</a>
-								<a href="post/edit/{{ $post->id }}" class="btn btn-grey btn-icon btn-edit" id="edit_post-{{$post->id}}" data-toggle="tooltip" title="Modifier">
+								<a href="post/edit/{{ $post->id }}" class="btn btn-grey btn-icon btn-shadow btn-edit" id="edit_post-{{$post->id}}" data-toggle="tooltip" title="Modifier">
 									<span><i class="far fa-edit"></i></span>
 								</a>
-								<a href="{{route('post.destroy',$post->id)}}" class="btn btn-red btn-icon" id="remove_post-{{$post->id}}" data-toggle="tooltip" title="Supprimer">
+								<a href="{{route('post.destroy',$post->id)}}" class="btn btn-red btn-shadow btn-icon" id="remove_post-{{$post->id}}" data-toggle="tooltip" title="Supprimer">
 									<span><i class="far fa-trash-alt"></i></span>
 								</a>
 								
@@ -59,7 +59,7 @@
 				<i class="far fa-times-circle"></i>
 			</a>
 			<div class="popup_content">
-				<div class="top_popup gradient">
+				<div class="top_popup ">
 					<h2>Supression d'un(e) stage ou d'une formation</h2>		
 				</div>
 				<div class="body_popup">
