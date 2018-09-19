@@ -10,8 +10,8 @@
 					<img class="image" src="{{url('images', $post->pictures->link)}}" alt="Image du post {{$post->titre}}">
 				</div>
 				<div class="right-item">
-					<a class="title" href="{{ url('post/' . $post->id) }}">{{ $post->titre }}</a>
 					<span  class="type">{{ $post->post_type }}</span >
+					<a class="title" href="{{ url('post/' . $post->id) }}">{{ $post->title }}</a>
 					<p class="description">{{ $post->description }}</p>	
 					<p class="date-start">
 						<i class="far fa-calendar-alt"></i>

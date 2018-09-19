@@ -14,7 +14,7 @@
 					@if ($errors->has('email'))
 						<span class="invalid-feedback" role="alert">
 							<strong>
-								Veuillez saisir une adresse email valide.
+								Adresse mail introuvable
 							</strong>
 						</span>
 					@endif
@@ -25,7 +25,7 @@
 					@if ($errors->has('password'))
 						<span class="invalid-feedback" role="alert">
 							<strong>
-								Veuillez saisir un mot de passe valide.
+								Le password n'est pas le bon
 							</strong>
 						</span>
 					@endif

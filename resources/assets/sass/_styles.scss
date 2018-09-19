@@ -1,7 +1,7 @@
     @import 'fonts';
-    @import 'elements';
+    @import 'normalize';
     @import 'variables';
-    @import 'boutons';
+    @import 'cta';
 
 /* ********** Body ********** */
     .clearboth{
@@ -466,6 +466,7 @@
                                 .btn-submit{
                                     display: block;
                                     margin: 0 auto;
+                                    padding: 15px 50px;
                                 }
                             }
                         }

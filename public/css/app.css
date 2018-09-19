@@ -10475,24 +10475,6 @@ a.text-dark:focus {
   }
 }
 
-button {
-  cursor: pointer;
-}
-
-button:hover {
-  cursor: pointer;
-}
-
-a {
-  text-decoration: none;
-  cursor: pointer;
-}
-
-a:hover {
-  text-decoration: none;
-  cursor: pointer;
-}
-
 /* ********** RESET ELEMENTS ********** */
 
 table {
@@ -10545,6 +10527,24 @@ acronym {
 
 body:-webkit-full-page-media {
   background-color: none !important;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* ******************************* VARIABLES ******************************* */
@@ -11333,6 +11333,7 @@ nav .nav-content .user-connected .dropdown a.link-logout:hover {
 .content .contact .contact-content .form-contact form .form-group .btn-submit {
   display: block;
   margin: 0 auto;
+  padding: 15px 50px;
 }
 
 .content .login {

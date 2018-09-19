@@ -47410,7 +47410,7 @@ if (false) {
 /* 43 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: \n\t\tfont-size: 12px;w\n                 ^\n      Property \"w\" must be followed by a ':'\n      in /Applications/XAMPP/xamppfiles/htdocs/workshop_laravel_18/resources/assets/sass/_cta.scss (line 18, column 19)\n    at runLoaders (/Applications/XAMPP/xamppfiles/htdocs/workshop_laravel_18/node_modules/webpack/lib/NormalModule.js:195:19)\n    at /Applications/XAMPP/xamppfiles/htdocs/workshop_laravel_18/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /Applications/XAMPP/xamppfiles/htdocs/workshop_laravel_18/node_modules/loader-runner/lib/LoaderRunner.js:230:18\n    at context.callback (/Applications/XAMPP/xamppfiles/htdocs/workshop_laravel_18/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Object.asyncSassJobQueue.push [as callback] (/Applications/XAMPP/xamppfiles/htdocs/workshop_laravel_18/node_modules/sass-loader/lib/loader.js:55:13)\n    at Object.done [as callback] (/Applications/XAMPP/xamppfiles/htdocs/workshop_laravel_18/node_modules/neo-async/async.js:7974:18)\n    at options.error (/Applications/XAMPP/xamppfiles/htdocs/workshop_laravel_18/node_modules/node-sass/lib/index.js:294:32)");
 
 /***/ })
 /******/ ]);

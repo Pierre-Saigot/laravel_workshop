@@ -5,7 +5,7 @@ use Faker\Generator as Faker;
 $factory->define(App\Post::class, function (Faker $faker) {
 	return [
 		'post_type' => $faker -> randomElement(['formation', 'stage']),
-                'titre' => $faker -> sentence(),
+                'title' => $faker -> sentence(),
                 'description' => $faker -> paragraph(),
                 'start' => $faker -> dateTime(),
                 'end' => $faker -> dateTime(),

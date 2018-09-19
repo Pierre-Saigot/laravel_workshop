@@ -11,47 +11,44 @@
 |
 */
 
-// **************** Client **************** \\
-
-// Page d'accueil
+// [ROUTE] HOME 
 Route::get('/', 'FrontController@index');
 
-// Page des stages
+// [ROUTE] STAGE
 Route::get('/stage', 'FrontController@stage');
 
-// Page des formations
+// [ROUTE] FORMATION
 Route::get('/formation', 'FrontController@formation');
 
-// Page d'un post
+// [ROUTE] POST 
 Route::get('/post/{id}', 'FrontController@show') -> where(['id' => '[0-9]+']);
 
-// Page d'un post
+// [ROUTE] CONTACT
 Route::get('/contact', 'FrontController@contact');
 
-// Affichage des résultats de recherche
+// [ROUTE] ECHO RESULTS SEARCH
 Route::get('/search', 'FrontController@search');
 
-// Recherche via l'index
+// [ROUTE] SEARCH BY HOME
 Route::post('/search', 'FrontController@find');
 
-// **************** Admin **************** \\
+// **************** DASHBOARD **************** \\
 
-// Routes Sécurisées
 Route::resource('dashboard', 'PostController')->middleware('auth');
 
-// Page de création d'un post
+// [ROUTE] CREAT POST
 Route::get('post/create', 'PostController@create')->middleware('auth');
 
-// Envoie du form de création d'un post
+// [ROUTE] SEND POST
 Route::post('post', 'PostController@store')->middleware('auth');
 
-// Page d'edition d'un post
+// [ROUTE] EDIT POST
 Route::get('post/edit/{id}', 'PostController@edit')->name('post.edit');
 
 // Envoie du form d'édition d'un post
 Route::post('post/edit/{id}', 'PostController@update')->name('post.update');
 
-// Suppression d'un Post
+// [ROUTE] DELETE POST
 Route::get('/post/delete/{id}','PostController@destroy')->name('post.destroy');
 
 
