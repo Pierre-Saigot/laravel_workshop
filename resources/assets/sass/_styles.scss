@@ -269,19 +269,21 @@
                             width: 400px;
                             input{
                                 transition: all ease 0.2s;
+                                border: 3px solid $black;
+                                border-top-left-radius: 50px;
+                                border-bottom-left-radius: 50px;
                                 &:focus{
                                     outline: none;
                                     border-color: $brown;
-                                    box-shadow: none!important;
                                 }
                             }
                             .input-group-append{
                                 button{
                                     display: block;
                                     color: $white;
-                                    background: #ced4da;
+                                    background: $black;
                                     border-radius: 0px 5px 5px 0;
-                                    border: 1px solid #ced4da;
+                                    border: 1px solid $black;
                                     padding: 1px 25px 2px;
                                     transition: all ease 0.2s;
                                     &:hover{
@@ -313,6 +315,11 @@
                 }
             }
             .home{
+                .left-content{
+                    h2{
+                        margin-top: 50px;
+                    }
+                }
                 .right-content{
                     .search{
                         margin: 0;
@@ -427,7 +434,7 @@
                     }
                     .form-contact{
                         padding: 25px;
-                        height: calc(100% - 83px);
+                        height: calc(100% - 80px);
                         border: 1px solid $bordergrey;
                         form{
                             display: flex;
@@ -435,7 +442,6 @@
                             align-items: center;
                             justify-content: center;
                             width: 70%;
-                            height: 100%;
                             margin: 0 auto;
                             .form-group{
                                 width: 100%;
@@ -447,20 +453,21 @@
                                 }
                                 input{
                                     transition: all ease 0.2s;
+                                    border: 3px solid $black;
+                                    border-radius: 50px;
                                     &:focus{
                                         outline: none;
-                                        border-color: $brown;
-                                        box-shadow: none!important;
                                     }
                                 }
                                 textarea{
                                     height: 200px;
                                     resize: none;
                                     transition: all ease 0.2s;
+                                    border-radius: 10px;
+                                    border: 3px solid $black;
                                     &:focus{
                                         outline: none;
                                         border-color: $brown;
-                                        box-shadow: none!important;
                                     }
                                 }
                                 .btn-submit{
@@ -529,7 +536,6 @@
                                     padding: 20px 20px;
                                     &:focus{
                                         outline: none;
-                                        box-shadow: none!important;
                                     }
                                 }
                                 .btn-connect{
@@ -551,8 +557,7 @@
                 align-items: center;
                 justify-content: center;
                 width: 100vw;
-                min-height: 100vh;
-                padding: 125px 25px 25px;
+                padding: 130px 30px 30px;
                 .dashboard-content{
                     position: relative;
                     width: 100%;

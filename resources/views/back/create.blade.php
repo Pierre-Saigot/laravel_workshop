@@ -22,8 +22,8 @@
 							<input type="text" class="form-control" disabled  accept="image/*"placeholder="Image de votre stage ou formation" value="image.png">
 							<div class="input-group-prepend">
 								<button class="btn btn-blue btn-normal upload-field" type="button">
-									<span><i class="fas fa-upload"></i></span>
-									Importer
+									<span><i class="fas fa-file-upload"></i></span>
+									Upload
 								</button>
 							</div>
 						</div>

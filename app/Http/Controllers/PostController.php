@@ -41,7 +41,7 @@ class PostController extends Controller{
 	public function store(Request $request)
 	{
 		$post = new Post;
-		$post->titre = $request->titre;
+		$post->title = $request->title;
 		$post->description = $request->description;
 		$post->start = $request->start;
 		$post->end = $request->end;
@@ -99,7 +99,7 @@ class PostController extends Controller{
 	{	
 		$post = Post::find($id);
 
-		$post->titre = $request->titre;
+		$post->title = $request->title;
 		$post->description = $request->description;
 		$post->start = $request->start;
 		$post->end = $request->end;

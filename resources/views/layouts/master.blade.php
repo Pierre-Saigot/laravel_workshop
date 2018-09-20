@@ -94,9 +94,9 @@
 			</footer>
 		</div>
 
-		<!-- Appels des Scripts -->
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 		<script src="{{ asset('js/main.js') }}" defer></script>
-    		<script src="{{asset('js/app.js')}}"></script>
-    	</body>
+    	<script src="{{ asset('js/app.js')}}"></script>
+	</body>
 </html>

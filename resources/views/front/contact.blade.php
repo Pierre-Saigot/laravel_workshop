@@ -10,7 +10,7 @@
 			<form action="#">
 				<div class="form-group row">
 					<label for="contact-email">Votre email : </label>
-					<input id="contact-email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="contact-email" value="{{ old('email') }}" required autofocus placeholder="exemple@exemple.com">
+					<input id="contact-email" type="email" class="form-control" required autofocus placeholder="exemple@exemple.com">
 					@if ($errors->has('email'))
 						<span class="invalid-feedback" role="alert">
 							<strong>
@@ -21,7 +21,7 @@
 				</div>
 				<div class="form-group row">
 					<label for="contact-description">Votre message : </label>
-					<textarea id="contact-description" name="contact-description" class="form-control" placeholder="Message..."> 
+					<textarea id="contact-description" name="contact-description" required class="form-control" placeholder="Message..."> 
 					</textarea>
 				</div>
 				<div class="form-group row mb-0">

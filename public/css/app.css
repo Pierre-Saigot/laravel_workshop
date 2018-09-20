@@ -11058,6 +11058,9 @@ nav .nav-content .user-connected .dropdown a.link-logout:hover {
 .content .formation .right-content .search .input-search input {
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
+  border: 3px solid #2E2E2E;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
 }
 
 .content .home .right-content .search .input-search input:focus,
@@ -11065,8 +11068,6 @@ nav .nav-content .user-connected .dropdown a.link-logout:hover {
 .content .formation .right-content .search .input-search input:focus {
   outline: none;
   border-color: #3a1f04;
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
 }
 
 .content .home .right-content .search .input-search .input-group-append button,
@@ -11074,9 +11075,9 @@ nav .nav-content .user-connected .dropdown a.link-logout:hover {
 .content .formation .right-content .search .input-search .input-group-append button {
   display: block;
   color: #FFF;
-  background: #ced4da;
+  background: #2E2E2E;
   border-radius: 0px 5px 5px 0;
-  border: 1px solid #ced4da;
+  border: 1px solid #2E2E2E;
   padding: 1px 25px 2px;
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
@@ -11112,6 +11113,10 @@ nav .nav-content .user-connected .dropdown a.link-logout:hover {
   font-size: 24px;
   -webkit-transition: all ease 0.3s;
   transition: all ease 0.3s;
+}
+
+.content .home .left-content h2 {
+  margin-top: 50px;
 }
 
 .content .home .right-content .search {
@@ -11281,7 +11286,7 @@ nav .nav-content .user-connected .dropdown a.link-logout:hover {
 
 .content .contact .contact-content .form-contact {
   padding: 25px;
-  height: calc(100% - 83px);
+  height: calc(100% - 80px);
   border: 1px solid #dee2e6;
 }
 
@@ -11300,7 +11305,6 @@ nav .nav-content .user-connected .dropdown a.link-logout:hover {
       -ms-flex-pack: center;
           justify-content: center;
   width: 70%;
-  height: 100%;
   margin: 0 auto;
 }
 
@@ -11318,13 +11322,12 @@ nav .nav-content .user-connected .dropdown a.link-logout:hover {
 .content .contact .contact-content .form-contact form .form-group input {
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
+  border: 3px solid #2E2E2E;
+  border-radius: 50px;
 }
 
 .content .contact .contact-content .form-contact form .form-group input:focus {
   outline: none;
-  border-color: #3a1f04;
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
 }
 
 .content .contact .contact-content .form-contact form .form-group textarea {
@@ -11332,13 +11335,13 @@ nav .nav-content .user-connected .dropdown a.link-logout:hover {
   resize: none;
   -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
+  border-radius: 10px;
+  border: 3px solid #2E2E2E;
 }
 
 .content .contact .contact-content .form-contact form .form-group textarea:focus {
   outline: none;
   border-color: #3a1f04;
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
 }
 
 .content .contact .contact-content .form-contact form .form-group .btn-submit {
@@ -11437,8 +11440,6 @@ nav .nav-content .user-connected .dropdown a.link-logout:hover {
 
 .content .login .login-content .form-login form .form-group input:focus {
   outline: none;
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
 }
 
 .content .login .login-content .form-login form .form-group .btn-connect {
@@ -11463,8 +11464,7 @@ nav .nav-content .user-connected .dropdown a.link-logout:hover {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100vw;
-  min-height: 100vh;
-  padding: 125px 25px 25px;
+  padding: 130px 30px 30px;
 }
 
 .content .dashboard .dashboard-content {

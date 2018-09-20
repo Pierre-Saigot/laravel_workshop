@@ -10,8 +10,8 @@
 			<form method="POST" action="{{ route('post.update', $posts->id) }}" class="needs-validation" novalidate>
         			@csrf
 				<div class="form-group form-row">
-					<label for="titre">Titre</label>
-					<input id="titre" type="text" class="form-control" name="titre" placeholder="Titre de votre stage ou formation" required autofocus value="{{$posts->titre}}">
+					<label for="title">Titre</label>
+					<input id="title" type="text" class="form-control" name="title" placeholder="Titre de votre stage ou formation" required autofocus value="{{$posts->title}}">
 					<div class="valid-feedback">
 						Titre valide.
 					</div>
@@ -38,7 +38,7 @@
 							<div class="input-group-prepend">
 								<button class="btn btn-blue btn-normal upload-field" type="button">
 									<span><i class="fas fa-upload"></i></span>
-									Importer
+									Upload
 								</button>
 							</div>
 						</div>
