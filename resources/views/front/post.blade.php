@@ -4,8 +4,8 @@
 <section class="post ">
 	<article class="item-open">
 		@if(count($posts)>0)
-			<div class="top-post ">
-				<h1 class='title'>{{$posts->titre}}</h1>	
+			<div class="top-post">
+				<h1 class='title'>{{$posts->title}}</h1>	
 			</div>
 			<div class="post-content">
 				<div class="left-post">
