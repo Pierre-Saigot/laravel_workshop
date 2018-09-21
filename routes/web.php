@@ -14,26 +14,21 @@
 // [ROUTE] HOME 
 Route::get('/', 'FrontController@index');
 
-// [ROUTE] SEARCH - HOME
-Route::post('/', 'FrontController@searchHome')->name('searchHome');
+// [ROUTE] SEARCH
+Route::get('/search', 'FrontController@search')->name('search');	
 
 // [ROUTE] STAGE
 Route::get('/stage', 'FrontController@stage');
 
-// [ROUTE] SEARCH - STAGE
-Route::post('/stage', 'FrontController@searchStage')->name('searchStage');
-
 // [ROUTE] FORMATION
 Route::get('/formation', 'FrontController@formation');
-
-// [ROUTE] SEARCH - FORMATION
-Route::post('/formation', 'FrontController@searchFormation')->name('searchFormation');
 
 // [ROUTE] POST 
 Route::get('/post/{id}', 'FrontController@show') -> where(['id' => '[0-9]+']);
 
 // [ROUTE] CONTACT
 Route::get('/contact', 'FrontController@contact');
+Route::post('/contact', 'FrontController@sendmail')->name('sendmail');
 
 
 

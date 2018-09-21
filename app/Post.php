@@ -14,6 +14,7 @@ class Post extends Model
 			'start', 
 			'end', 
 			'price', 
+			'status',
 			'max_users'
 	   	];	
         public function categories(){
@@ -21,6 +22,9 @@ class Post extends Model
         }
         public function pictures(){
                 return $this->hasOne(Picture::class);
+        }
+        public function scopePublished($query){
+        		return $query->where('status', 'publié');
         }
 
 }

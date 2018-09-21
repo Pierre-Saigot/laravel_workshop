@@ -14,6 +14,18 @@
 					<label for="description">Description</label>
 					<textarea id="description" name="description" class="form-control" placeholder="Description de votre stage ou formation" required></textarea>
 				</div>
+				<div class="form-group row">
+					<div class="custom-control custom-checkbox my-1 mr-sm-2">
+						@if($post->status == "publié")
+				    		<input type="checkbox" checked class="custom-control-input" id="statusPublish">
+						@else
+				    		<input type="checkbox" class="custom-control-input" id="statusPublish">
+						@endif
+
+						<input type="text" name="status" id="data-status" hidden>
+				    <label class="custom-control-label" for="statusPublish">Mettre en ligne</label>
+				  </div>
+				</div>
 				<div class="form-group">
 					<div class="picture">
 						<label for="picture">Upload image</label>

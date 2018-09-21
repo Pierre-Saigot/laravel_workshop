@@ -28,7 +28,7 @@
 							</p>
 							<p class="user">
 								<i class="fas fa-users"></i>
-								Limité à {{$posts->max_users}} élève(s).
+								Limité à {{$posts->max_users}} participants(s).
 							</p>
 						</div>
 					</div>

@@ -2,7 +2,7 @@ var laravelWS = new function(){
 	this.init = function(){
 		console.log('%c Laravel was started 🔥 !', 'background: #FFF; color: #222');
 		this.initEventTrigger();
-		this.animation();
+		this.setAnim();
 	}
 	this.initEventTrigger = function(){		
 		// Page Create - Input type file
@@ -54,11 +54,29 @@ var laravelWS = new function(){
 
 		//Init tooltip
 		$('[data-toggle="tooltip"]').tooltip();
+
+		function status(){
+			  if ($("#statusPublish").is(':checked')) {
+			    $('#data-status').attr('value', 'publié');
+			  } else {
+			    $('#data-status').attr('value', 'non_publié');
+			  }
+		}
+		status();
+		
+		$("#statusPublish").on('change', function() {
+		  	status();
+		});
+	}
+
+	this.setAnim = function() {
+		TweenMax.set($('.item, .right-content'), {opacity: 0});
+		this.animation();
 	}
 
 	this.animation = function () {	
-		TweenMax.set($('.item'), {opacity: 0});
-		TweenMax.to($('.item'), 0.8, {delay: 0.3, opacity: 1, ease: Power1.easeOut});
+		TweenMax.to($('.item'), 0.8, {opacity: 1, ease: Power1.easeOut});
+		TweenMax.to($('.right-content'), 0.8, {opacity: 1, ease: Power1.easeOut});
 	}
 }
 

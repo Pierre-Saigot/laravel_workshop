@@ -7,10 +7,11 @@
 			<h1>Nous contacter</h1>
 		</div>
 		<div class="form-contact">
-			<form action="#">
+			<form action="{{route('sendmail')}}" method="POST">
+				{{csrf_field()}}
 				<div class="form-group row">
-					<label for="contact-email">Votre email : </label>
-					<input id="contact-email" type="email" class="form-control" required autofocus placeholder="exemple@exemple.com">
+					<label for="email">Votre email : </label>
+					<input id="email" type="email" class="form-control" name="email" required autofocus placeholder="exemple@exemple.com">
 					@if ($errors->has('email'))
 						<span class="invalid-feedback" role="alert">
 							<strong>
@@ -20,8 +21,8 @@
 					@endif
 				</div>
 				<div class="form-group row">
-					<label for="contact-description">Votre message : </label>
-					<textarea id="contact-description" name="contact-description" required class="form-control" placeholder="Message..."> 
+					<label for="message">Votre message : </label>
+					<textarea id="message" name="message" required class="form-control" placeholder="Message..."> 
 					</textarea>
 				</div>
 				<div class="form-group row mb-0">

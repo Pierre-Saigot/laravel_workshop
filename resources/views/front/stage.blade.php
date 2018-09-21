@@ -1,36 +1,33 @@
 @extends('layouts.master')
 
 @section('content')
-<section class="stage ">
+<section class="stage">
 	<div class="left-content">
 		@foreach ($posts as $post)
-			@if($post->status)
-				<div class="item">
-					<a class="item-link" href="{{ url('post/' . $post->id) }}"></a>
-					<div class="left-item">
-						<img class="image" src="{{url('images', $post->pictures->link)}}" alt="Image du post {{$post->titre}}">
-					</div>
-					<div class="right-item">
-						<span class="type">{{ $post->post_type }}</span >
-						<a class="title" href="{{ url('post/' . $post->id) }}">{{ $post->title }}</a>
-						<p class="date-start">
-							<i class="far fa-calendar-alt"></i>
-							Débute le : {{$post->start}}
-						</p> 	
-						<p class="description">{{ $post->description }}</p>	
-					</div>
+			<div class="item">
+				<a class="item-link" href="{{ url('post/' . $post->id) }}"></a>
+				<div class="left-item">
+					<img class="image" src="{{url('images', $post->pictures->link)}}" alt="Image du post {{$post->titre}}">
 				</div>
-			@endif
+				<div class="right-item">
+					<span class="type">{{ $post->post_type }}</span >
+					<a class="title" href="{{ url('post/' . $post->id) }}">{{ $post->title }}</a>
+					<p class="date-start">
+						<i class="far fa-calendar-alt"></i>
+						Débute le : {{$post->start}}
+					</p> 	
+					<p class="description">{{ $post->description }}</p>	
+				</div>
+			</div>
 		@endforeach
 		{{ $posts->links() }}
 	</div>
 	<div class="right-content">
 		<div class="search">
 			<h1>Recherchez un(e) stage / formation </h1>
-			<form action="{{route('searchStage')}}" method="POST" enctype="multipart/form-data">
-				{{ csrf_field() }}
+			<form action="{{route('search')}}" method="GET" enctype="multipart/form-data">
 				<div class="input-search input-group">
-					<input name="search" class="form-control" type="search" placeholder="Recherche...">
+					<input name="q" class="form-control" type="search" value="{{ app('request')->input('q') }}" placeholder="Recherche...">
 					<div class="input-group-append">
 	        			<button type="submit"><i class='fas fa-search'></i></button>
 	  				</div>

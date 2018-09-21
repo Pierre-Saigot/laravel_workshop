@@ -45,6 +45,7 @@ class PostController extends Controller{
 		$post->description = $request->description;
 		$post->start = $request->start;
 		$post->end = $request->end;
+		$post->status = $request->status;
 		$post->price = $request->price;
 		$post->max_users = $request->max_users;
 
@@ -84,7 +85,7 @@ class PostController extends Controller{
 	public function edit(int $id)
 	{
 		$post = Post::find($id);
-      		return view('back.edit', ['posts' => $post]);
+      		return view('back.edit', ['post' => $post]);
 
 	}
 
@@ -103,9 +104,10 @@ class PostController extends Controller{
 		$post->description = $request->description;
 		$post->start = $request->start;
 		$post->end = $request->end;
+		$post->status = $request->status;
 		$post->price = $request->price;
 		$post->max_users = $request->max_users;
-
+		
 		$post->save();
     		return redirect('/dashboard');
 	}

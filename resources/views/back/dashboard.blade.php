@@ -30,8 +30,8 @@
 							<td>{{ $post->post_type }}</td>
 							<td>{{ $post->created_at }}</td>
 							<td>
-								@if($post->status)
-								<span><i class="fa fa-check"></i></span>
+								@if($post->status == "publié")
+									<span><i class="fa fa-check"></i></span>
 								@else
 									<span><i class="fa fa-times"></i></span>
 								@endif
