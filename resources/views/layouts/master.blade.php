@@ -3,7 +3,7 @@
     	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
 		<!-- CSRF Token -->
 		<meta name="csrf-token" content="{{ csrf_token() }}">
@@ -21,7 +21,7 @@
 			<nav>
     				<div class="nav-content">
     					<ul>
-    						<li>
+    						<li class="wrap-logo">
     							<a class="logo" href="{{ url('/') }}">
 									<img src="{{ asset('assets/logo.png') }}"/>
     							</a>
@@ -37,10 +37,7 @@
     						</li>
     					</ul>
 						@guest
-							<!-- <a class="btn btn-blue btn-normal" href="{{ route('login') }}">
-								<span><i class="fas fa-sign-in-alt"></i></span>
-								{{ __('Connexion') }}
-							</a> -->
+						
 						@else
 						<ul>
 							<li class="user-connected">

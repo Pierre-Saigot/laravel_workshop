@@ -10630,11 +10630,19 @@ a:hover {
   border-color: #fbc4c4;
 }
 
+.btn-red span {
+  color: #f56c6c;
+}
+
 .btn-red:hover,
 .btn-red:focus {
   background: #f56c6c;
   border-color: #f56c6c;
-  color: #fff;
+}
+
+.btn-red:hover span,
+.btn-red:focus span {
+  color: #FFF;
 }
 
 /* ********** Body ********** */
@@ -10700,6 +10708,12 @@ nav .nav-content ul:nth-of-type(1) li {
   padding: 10px;
 }
 
+@media (max-width: 1023px) {
+  nav .nav-content ul:nth-of-type(1) li {
+    display: none;
+  }
+}
+
 nav .nav-content ul:nth-of-type(1) li a {
   display: block;
   color: #3a1f04;
@@ -10721,6 +10735,12 @@ nav .nav-content ul:nth-of-type(1) li a:focus {
 
 nav .nav-content ul:nth-of-type(1) li a.logo img {
   max-width: 100px;
+}
+
+@media (max-width: 1023px) {
+  nav .nav-content ul:nth-of-type(1) li.wrap-logo {
+    display: block;
+  }
 }
 
 nav .nav-content ul:nth-of-type(1) li:first-child {
@@ -10845,10 +10865,26 @@ nav .nav-content .user-connected .dropdown a.link-logout:hover {
           justify-content: space-between;
 }
 
+@media (max-width: 1023px) {
+  .content .home,
+  .content .stage,
+  .content .formation {
+    display: block;
+  }
+}
+
 .content .home .left-content,
 .content .stage .left-content,
 .content .formation .left-content {
   padding: 80px 25px 25px;
+}
+
+@media (max-width: 1023px) {
+  .content .home .left-content,
+  .content .stage .left-content,
+  .content .formation .left-content {
+    padding: 0;
+  }
 }
 
 .content .home .left-content .pagination,
@@ -10907,6 +10943,16 @@ nav .nav-content .user-connected .dropdown a.link-logout:hover {
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
+@media (max-width: 1023px) {
+  .content .home .left-content .item,
+  .content .stage .left-content .item,
+  .content .formation .left-content .item {
+    display: block;
+    width: calc(100vw - 30px);
+    margin: 25px auto;
+  }
+}
+
 .content .home .left-content .item .item-link,
 .content .stage .left-content .item .item-link,
 .content .formation .left-content .item .item-link {
@@ -10915,6 +10961,13 @@ nav .nav-content .user-connected .dropdown a.link-logout:hover {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.content .home .left-content .item .left-item .image,
+.content .stage .left-content .item .left-item .image,
+.content .formation .left-content .item .left-item .image {
+  margin: 0 auto;
+  display: block;
 }
 
 .content .home .left-content .item .right-item,
@@ -10965,6 +11018,14 @@ nav .nav-content .user-connected .dropdown a.link-logout:hover {
   text-transform: uppercase;
 }
 
+@media (max-width: 1023px) {
+  .content .home .left-content .item .right-item .type,
+  .content .stage .left-content .item .right-item .type,
+  .content .formation .left-content .item .right-item .type {
+    margin-top: 20px;
+  }
+}
+
 .content .home .left-content .item .right-item .description,
 .content .stage .left-content .item .right-item .description,
 .content .formation .left-content .item .right-item .description {
@@ -11008,6 +11069,14 @@ nav .nav-content .user-connected .dropdown a.link-logout:hover {
   padding: 80px 25px 25px;
 }
 
+@media (max-width: 1023px) {
+  .content .home .right-content,
+  .content .stage .right-content,
+  .content .formation .right-content {
+    padding: 0;
+  }
+}
+
 .content .home .right-content .search,
 .content .stage .right-content .search,
 .content .formation .right-content .search {
@@ -11038,9 +11107,19 @@ nav .nav-content .user-connected .dropdown a.link-logout:hover {
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
-.content .home .right-content .search h1,
-.content .stage .right-content .search h1,
-.content .formation .right-content .search h1 {
+@media (max-width: 1023px) {
+  .content .home .right-content .search,
+  .content .stage .right-content .search,
+  .content .formation .right-content .search {
+    display: block;
+    width: calc(100vw - 30px);
+    margin: 0 auto;
+  }
+}
+
+.content .home .right-content .search h2,
+.content .stage .right-content .search h2,
+.content .formation .right-content .search h2 {
   font-size: 22px;
   font-weight: 600;
   color: #3a1f04;
@@ -11051,6 +11130,16 @@ nav .nav-content .user-connected .dropdown a.link-logout:hover {
 .content .stage .right-content .search .input-search,
 .content .formation .right-content .search .input-search {
   width: 400px;
+}
+
+@media (max-width: 1023px) {
+  .content .home .right-content .search .input-search,
+  .content .stage .right-content .search .input-search,
+  .content .formation .right-content .search .input-search {
+    max-width: 300px;
+    width: auto;
+    margin: 0 auto;
+  }
 }
 
 .content .home .right-content .search .input-search input,
@@ -11119,8 +11208,21 @@ nav .nav-content .user-connected .dropdown a.link-logout:hover {
   margin-top: 50px;
 }
 
+@media (max-width: 1023px) {
+  .content .home .left-content h2 {
+    margin-top: 110px;
+    padding: 0 15px;
+  }
+}
+
 .content .home .right-content .search {
-  margin: 0;
+  margin-top: 250px;
+}
+
+@media (max-width: 1023px) {
+  .content .home .right-content .search {
+    margin-top: 50px;
+  }
 }
 
 .content .post {
@@ -11165,7 +11267,7 @@ nav .nav-content .user-connected .dropdown a.link-logout:hover {
   margin-top: 70px;
 }
 
-.content .post .item-open .top-post h1 {
+.content .post .item-open .top-post h2 {
   color: #2E2E2E;
   font-size: 22px;
   font-weight: 400;
@@ -11278,7 +11380,7 @@ nav .nav-content .user-connected .dropdown a.link-logout:hover {
   border-radius: 5px 5px 0 0;
 }
 
-.content .contact .contact-content .top-contact h1 {
+.content .contact .contact-content .top-contact h2 {
   color: #3a1f04;
   font-size: 28px;
   font-weight: 400;
@@ -11390,7 +11492,7 @@ nav .nav-content .user-connected .dropdown a.link-logout:hover {
   border-radius: 5px 5px 0 0;
 }
 
-.content .login .login-content .top-login h1 {
+.content .login .login-content .top-login h2 {
   color: #FFF;
   font-size: 28px;
   font-weight: 400;
@@ -11526,7 +11628,7 @@ nav .nav-content .user-connected .dropdown a.link-logout:hover {
   padding: 25px;
   background: #F8F8FA;
   border-radius: 5px;
-  width: 75%;
+  width: 85%;
   margin: 0 auto;
 }
 
@@ -11544,7 +11646,7 @@ nav .nav-content .user-connected .dropdown a.link-logout:hover {
   border-radius: 5px 5px 0 0;
 }
 
-.content .dashboard .dashboard-content .table .top-table .top-table-title h1 {
+.content .dashboard .dashboard-content .table .top-table .top-table-title h2 {
   color: #3a1f04;
   font-size: 28px;
   font-weight: 400;
@@ -11577,6 +11679,7 @@ nav .nav-content .user-connected .dropdown a.link-logout:hover {
 .content .dashboard .dashboard-content .popup_remove {
   position: fixed;
   display: none;
+  opacity: 0;
   top: 0;
   left: 0;
   width: 100%;
@@ -11628,9 +11731,10 @@ nav .nav-content .user-connected .dropdown a.link-logout:hover {
 }
 
 .content .dashboard .dashboard-content .popup_remove .popup_content .top_popup h2 {
-  color: #FFF;
+  color: #2E2E2E;
   font-size: 24px;
-  font-weight: 400;
+  text-align: center;
+  font-weight: 600;
   letter-spacing: 0.5px;
 }
 
@@ -11642,7 +11746,7 @@ nav .nav-content .user-connected .dropdown a.link-logout:hover {
 .content .dashboard .dashboard-content .popup_remove .popup_content .body_popup p {
   color: #333;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 500;
   text-align: center;
 }
 
@@ -11657,6 +11761,12 @@ nav .nav-content .user-connected .dropdown a.link-logout:hover {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 35px;
+  text-transform: uppercase;
+}
+
+.content .dashboard .dashboard-content .popup_remove .popup_content .body_popup .btn_action a {
+  border: 2px solid;
+  font-weight: bold;
 }
 
 .content .create,
@@ -11707,14 +11817,14 @@ nav .nav-content .user-connected .dropdown a.link-logout:hover {
   border-radius: 5px 5px 0 0;
 }
 
-.content .create .create-content .top-create h1,
-.content .create .create-content .top-edit h1,
-.content .create .edit-content .top-create h1,
-.content .create .edit-content .top-edit h1,
-.content .edit .create-content .top-create h1,
-.content .edit .create-content .top-edit h1,
-.content .edit .edit-content .top-create h1,
-.content .edit .edit-content .top-edit h1 {
+.content .create .create-content .top-create h2,
+.content .create .create-content .top-edit h2,
+.content .create .edit-content .top-create h2,
+.content .create .edit-content .top-edit h2,
+.content .edit .create-content .top-create h2,
+.content .edit .create-content .top-edit h2,
+.content .edit .edit-content .top-create h2,
+.content .edit .edit-content .top-edit h2 {
   color: #2E2E2E;
   font-size: 24px;
   font-weight: 400;
@@ -11912,7 +12022,6 @@ nav .nav-content .user-connected .dropdown a.link-logout:hover {
 .content .edit .create-content form .form-group:nth-of-type(5) .input-group,
 .content .edit .edit-content form .form-group:nth-of-type(4) .input-group,
 .content .edit .edit-content form .form-group:nth-of-type(5) .input-group {
-  max-width: 200px;
   min-width: 200px;
 }
 

@@ -3,7 +3,7 @@
 <div class="login ">
 	<div class="login-content">
 		<div class="top-login ">
-			<h1>Connexion</h1>
+			<h2>Connexion</h2>
 		</div>
 		<div class="form-login">
 			<form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">

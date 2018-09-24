@@ -5,7 +5,7 @@
 	<article class="item-open">
 		@if(count($posts)>0)
 			<div class="top-post">
-				<h1 class='title'>{{$posts->title}}</h1>	
+				<h2 class='title'>{{$posts->title}}</h2>	
 			</div>
 			<div class="post-content">
 				<div class="left-post">

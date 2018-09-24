@@ -4,9 +4,16 @@
 <section class="contact ">
 	<div class="contact-content">
 		<div class="top-contact ">
-			<h1>Nous contacter</h1>
+			<h2>Nous contacter</h2>
 		</div>
 		<div class="form-contact">
+			
+			@if (\Session::has('success'))
+				<div class="alert alert-success" role="alert">
+				  Le message a été envoyé avec succès.
+				</div>
+			@endif
+			
 			<form action="{{route('sendmail')}}" method="POST">
 				{{csrf_field()}}
 				<div class="form-group row">

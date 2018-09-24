@@ -15,19 +15,6 @@ var laravelWS = new function(){
 	  		$(this).parent().find('.form-control').val($(this).val().replace(/C:\\fakepath\\/i, ''));
 		});
 
-		$('.trigger-delete').on('click', function (e) {
-			e.preventDefault();
-			let id = $(this).attr('data-id');
-			let url_compiled = 'http://' + window.location.host + '/post/delete/' + id;
-			$('#delete-this-one').attr('href', url_compiled)
-			TweenMax.to($('.popup_remove'), 0.8, {display: 'block', opacity: 1, ease: Power1.easeOut});
-		})
-
-		$('.trigger-cancel').on('click', function (e) {
-			e.preventDefault();
-			TweenMax.to($('.popup_remove'), 0.5, {display: 'none', opacity: 0, ease: Power1.easeOut});
-		})
-
 		$('#contact-description').val('');
 
 		// Dropdown navbar

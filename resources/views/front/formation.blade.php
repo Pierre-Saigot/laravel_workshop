@@ -24,7 +24,7 @@
 	</div>
 	<div class="right-content">
 		<div class="search">
-			<h1>Recherchez un(e) stage / formation </h1>
+			<h2>Recherchez un(e) stage / formation </h2>
 			<form action="{{route('search')}}" method="GET" enctype="multipart/form-data">
 				{{ csrf_field() }}
 				<div class="input-search input-group">

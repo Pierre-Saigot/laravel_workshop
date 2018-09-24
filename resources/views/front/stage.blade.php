@@ -24,7 +24,7 @@
 	</div>
 	<div class="right-content">
 		<div class="search">
-			<h1>Recherchez un(e) stage / formation </h1>
+			<h2>Recherchez un(e) stage / formation </h2>
 			<form action="{{route('search')}}" method="GET" enctype="multipart/form-data">
 				<div class="input-search input-group">
 					<input name="q" class="form-control" type="search" value="{{ app('request')->input('q') }}" placeholder="Recherche...">

@@ -4,10 +4,10 @@
 		<div class="edit-content">
 			@if(count($post)>0)
 			<div class="top-edit ">
-				<h1>Modification d'un post
-				</h1>	
+				<h2>Modification d'un post
+				</h2>	
 			</div>
-			<form method="POST" action="{{ route('post.update', $post->id) }}" class="needs-validation" novalidate>
+			<form method="POST" action="{{ route('post.update', $post->id) }}" enctype="multipart/form-data" class="needs-validation" novalidate>
         			@csrf
 				<div class="form-group form-row">
 					<label for="title">Titre</label>

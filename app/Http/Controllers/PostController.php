@@ -107,7 +107,29 @@ class PostController extends Controller{
 		$post->status = $request->status;
 		$post->price = $request->price;
 		$post->max_users = $request->max_users;
-		
+
+		$new_picture = $request->file('picture');
+		$old_picture = $post->pictures->link;
+
+		if ($new_picture !== null) {
+
+			Storage::disk('local')->delete($old_picture);
+			$path = $request->picture->store('/');
+
+			if ($post->pictures()->exists()) {
+				$post->pictures()->update([
+					'title' => 'Default',
+					'link' => $path,
+					'post_id' => $post->id,
+				]);
+			}else{
+ 				$post->pictures()->create([
+					'title' => 'Default',
+					'link' => $path,
+					'post_id' => $post->id,
+				]);
+			}
+		}
 		$post->save();
     		return redirect('/dashboard');
 	}

@@ -1,9 +1,9 @@
 @extends('layouts.master')
 	@section('content')
-	<div class="create ">
+	<div class="create">
 		<div class="create-content">
 			<div class="top-create">
-				<h1>Création d'une formation ou stage</h1>	
+				<h2>Création d'une formation ou stage</h2>	
 			</div>
 			<form action="{{ url('/dashboard') }}" method="post" enctype="multipart/form-data">
 				<div class="form-group form-row">
@@ -16,25 +16,20 @@
 				</div>
 				<div class="form-group row">
 					<div class="custom-control custom-checkbox my-1 mr-sm-2">
-						@if($post->status == "publié")
-				    		<input type="checkbox" checked class="custom-control-input" id="statusPublish">
-						@else
-				    		<input type="checkbox" class="custom-control-input" id="statusPublish">
-						@endif
-
-						<input type="text" name="status" id="data-status" hidden>
+			    		<input type="checkbox" checked class="custom-control-input" id="statusPublish">
+						<input type="text" name="status" id="data-status" value="publié" hidden>
 				    <label class="custom-control-label" for="statusPublish">Mettre en ligne</label>
 				  </div>
 				</div>
 				<div class="form-group">
 					<div class="picture">
 						<label for="picture">Upload image</label>
-						<input id="picture" type="file" name="picture" class="input-file" accept="image/*">
+						<input id="picture" type="file" name="picture" class="input-file">
 						<div class="input-group">
-							<input type="text" class="form-control" disabled  accept="image/*"placeholder="Image de votre stage ou formation" value="image.png">
+							<input type="text" class="form-control" disabled placeholder="Image de votre stage ou formation" value="img.jpg">
 							<div class="input-group-prepend">
 								<button class="btn btn-blue btn-normal upload-field" type="button">
-									<span><i class="fas fa-file-upload"></i></span>
+									<span><i class="fas fa-upload"></i></span>
 									Upload
 								</button>
 							</div>

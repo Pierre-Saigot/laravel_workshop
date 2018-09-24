@@ -6,7 +6,7 @@
 		<div class="table">
 			<div class="top-table ">
 				<div class="top-table-title">
-					<h1>Administration</h1>
+					<h2>Administration</h2>
 				</div>
 				<div class="top-table-action">
 					<a href="{{url('post/create')}}" class="btn btn-grey btn-normal btn-add">
@@ -43,7 +43,7 @@
 								<a href="post/edit/{{ $post->id }}" class="btn btn-grey btn-icon btn-shadow btn-edit" id="edit_post-{{$post->id}}" data-toggle="tooltip" title="Modifier">
 									<span><i class="far fa-edit"></i></span>
 								</a>
-								<a href="{{route('post.destroy',$post->id)}}" class="btn btn-red btn-shadow btn-icon" id="remove_post-{{$post->id}}" data-toggle="tooltip" title="Supprimer">
+								<a class="btn btn-red trigger-delete btn-shadow btn-icon" data-id="{{$post->id}}" data-toggle="tooltip" title="Supprimer">
 									<span><i class="far fa-trash-alt"></i></span>
 								</a>
 								
@@ -54,28 +54,23 @@
 			</table>
 		</div>
 		<div class="popup_remove">
-			{{ csrf_token() }}
-			<a href="javascript:;" class="btn-close_remove">
-				<i class="far fa-times-circle"></i>
-			</a>
 			<div class="popup_content">
-				<div class="top_popup ">
-					<h2>Supression d'un(e) stage ou d'une formation</h2>		
+				<div class="top_popup">
+					<h2>Supression d'un stage ou d'une formation</h2>		
 				</div>
 				<div class="body_popup">
 					<p>	
-						Êtes-vous sûr de vouloir supprimer ce stage / cette formation ? 
+						Êtes-vous sûr ? 
 					</p>
-					<p>{{$post->name}}</p>
 					<div class="btn_action">
-						<a href="{{route('post.destroy', ['id' => $post->id])}}" type="submit" class="btn btn-red btn-normal btn-remove">
+						<a class="btn trigger-cancel btn-yellow btn-normal btn-cancel">
+							<span><i class="fas fa-ban"></i></span>
+							Annuler
+						</a>
+						<a href="" id="delete-this-one" type="submit" class="btn btn-red btn-normal btn-remove">
 							<span><i class="fas fa-trash-alt"></i></span>
 							Supprimer
 						</a>
-						<button type="submit" class="btn btn-yellow btn-normal btn-cancel">
-							<span><i class="fas fa-ban"></i></span>
-							Annuler
-						</button>
 					</div>
 				</div>
 			</div>

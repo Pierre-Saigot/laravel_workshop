@@ -20,9 +20,9 @@ class Post extends Model
         public function categories(){
                 return $this->belongsTo(Categorie::class);
         }
-        public function pictures(){
-                return $this->hasOne(Picture::class);
-        }
+       	public function pictures(){
+			return $this->hasOne(Picture::class);
+		}
         public function scopePublished($query){
         		return $query->where('status', 'publié');
         }

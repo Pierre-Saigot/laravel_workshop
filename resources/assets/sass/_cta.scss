@@ -60,10 +60,15 @@
 		color: #f56c6c;
 		background: #fef0f0;
 		border-color: #fbc4c4;
+		span{
+			color: #f56c6c;
+		}
 		&:hover,
 		&:focus{
 			background: #f56c6c;
 			border-color: #f56c6c;
-			color: #fff;
+			span{
+				color: #FFF;
+			}
 		}
 	}
